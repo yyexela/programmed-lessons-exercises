@@ -1,0 +1,6 @@
+ch9 exercises
+1) when a declared variable is used but not initialized there is a complilation error
+obvious error when a variable is used but not declared
+
+2) when declaring a double as a fraction (ex. 2/3) make one of the values a floating
+	point value, such as 2.0 or 3.0 to let Java know it is working with floating points

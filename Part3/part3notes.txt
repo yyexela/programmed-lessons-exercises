@@ -1,0 +1,67 @@
+1 byte is 8 bits
+Short stores 16 bits/ 2 bytes (max value is (2^16-1)/2 since it goes from - to +)
+Int stores 32 bits/ 4 bytes (max values is +(2^32-2)/2, -(2^32)/2)
+double stores 64 bits/ 8 bytes 
+Largest value of a number = NUM.MAX_VALUE
+
+Primitive data types (case sensitive): 
+byte (8 bits) (1 byte)
+short (16 bits) (2 bytes)
+int (32 bits) (4 bytes)
+long (64 bits) (8 bytes)
+float (32 bits) (4 bytes) (floating point)
+double (64 bits) (8 bytes) (floating point)
+char (16 bits) (2 bytes)
+boolean
+
+int and double have different bit patterns: floating point and integer
+
+String and Scanner are classes
+
+A primitive data type is: a method for representing values that is a fundamental part of a language
+
+a-Z can be used for variables, 0-9, $, and _   ONLY. NOT - or ` or \] etc
+cannot start with digit
+cannot be a reserved word (ex int or double)
+
+Declaration: int tree;
+Assignment: tree = 3;
+assignment changes old value to new one, initilization give it its first value
+
+expression: combination of literals, operators, variables, and parenthesis
+operator: arithmetic symbol like * + - /
+operand: a value acted upon by an operator (number)
+
+
+when a variable is not initialized, an error occurs when the variable name is used
+
+when doing math, the value is always stored as 32 bits unless one or more values are 64 bits
+
+an object is created at runtime and is different than its reference variable
+
+a class is a description of a kind of object
+an object is a chunk of memory that can contain data along with methods to process data
+no objects exist when a program starts running, they are created one by one
+a reference to an object is data on where the object is located
+
+Exception: object that has information about what went wrong
+When an exception is sent to a higher level of the system, it throws the exception
+
+numeric data is first character data then is converted into a primitive numeric type
+
+keyboard input data is always character data
+
+most math functions expect doubles as arguments
+
+CODE:
+exp(2) = e^2
+final double pi = 3.141; (final means the variable won't change, it is a constant)
+x.length(); counts characters used in string
+x.trim(); trims off spaces and tabs from end of string
+java.util.Scanner;
+scan.nextLine();
+scan.nextInt();
+scan.nextDouble();
+java.text.*;
+DecimalFormat numform = new DecimalFormat("0.0");
+NUM.MAX_VALUE;

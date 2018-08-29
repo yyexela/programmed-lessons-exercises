@@ -1,0 +1,8 @@
+"an object and its reference variable are different things, and that an object is created at run time"
+the '.substring(x, y)' code shortens a string by starting from x (assuming the first character is 0) to y-1
+
+index notes:
+same value = no string is printed
+end value is longer than string = java error
+beginning is less than 0 = java error
+beginning is larger than ending = java error

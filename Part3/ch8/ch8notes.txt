@@ -1,0 +1,26 @@
+ch8 exercises
+1) error when using large # for short: 
+.\Shortfall.java:3: error: incompatible types: possible lossy conversion from int to short
+
+^ when using int, it works
+
+2)
+short = 16 bits
+double = 64 bits
+
+max value = 1.7976931348623157E308
+
+3)
+e^(3200+) = infinity; according to java
+
+4)
+what works for char: 
+'A'
+'Z'
+' '
+what doesn't work:
+'AA'
+''
+"A"
+
+Double quotes = string, not a char

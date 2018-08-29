@@ -1,0 +1,4 @@
+float is less accurate than a double, extra data use is not noticeable, and holds less
+ 
+Harmonic mean: 2.0 / ( (1/x) + (1/y) ) does NOT work
+Harmonic mean: 2.0 / ((1.0/x) + (1.0/y)) DOES work
