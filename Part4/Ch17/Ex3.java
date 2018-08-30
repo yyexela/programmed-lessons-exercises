@@ -60,8 +60,5 @@ class Ex3{
         } else if (items == 1){
             System.out.println("Heat for " + minutes + " minutes and " + seconds + " seconds");
         }
-
-
     }
-
 }
