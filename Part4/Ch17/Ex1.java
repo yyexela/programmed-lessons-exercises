@@ -9,14 +9,16 @@ class Ex1 {
 		int express;
 		String deliveryType;
 		String item;
-
 		double itemPrice;
 		String dollarPrice;
 		int deliveryPrice;
+		double totalPrice;
+		boolean error = false;
+		String totalPriceStr;
+
+
 		deliveryPrice = 0;
 		deliveryType = "error";
-
-		boolean error = false;
 
 		System.out.println("Delivery item: ");
 		item = scan.nextLine();
@@ -56,6 +58,10 @@ class Ex1 {
 		itemPrice = itemPrice / 100.0;
 		dollarPrice = numform.format(itemPrice);
 
+		totalPrice = itemPrice + deliveryPrice;
+
+		totalPriceStr = numform.format(totalPrice);
+
 		if (error == false){
 
 			System.out.println("---------------------------");
@@ -64,6 +70,7 @@ class Ex1 {
 			System.out.println('\t' + "Item:   "  + '\t' + item);
 			System.out.println('\t'  + "Price:    " + '\t' + "$" + dollarPrice);
 			System.out.println('\t' + "Delivery: "  + '\t' + deliveryType + " $" + deliveryPrice);
+			System.out.println('\t' + "Total: "  + '\t' + " " + '\t' + "$" + totalPriceStr);
 
 		} else {
 			System.out.println("Program Terminated");
