@@ -7,6 +7,7 @@ class Ex3{
         int items;
         int seconds;
         int minutes;
+        int secondsWork;
 
         minutes = 0;
 
@@ -37,13 +38,19 @@ class Ex3{
             }
         }
 
+        secondsWork = seconds + (minutes * 60);
+        System.out.println("Seconds total: " + secondsWork);
+
         System.out.println("-------------------------------");
 
         if(items > 3){
             System.out.println("Invalid item amount (item > 3)");
         } else if (items == 2){
-            minutes = minutes + minutes/2;
-            seconds = seconds + seconds/2;
+            secondsWork = secondsWork + secondsWork/2;
+            
+            minutes = (secondsWork - (secondsWork % 60))/60;
+            seconds = secondsWork - (minutes * 60);
+
             if(seconds > 60){
                 minutes = minutes + 1;
                 seconds = seconds - 60;
