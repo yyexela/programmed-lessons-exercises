@@ -6,13 +6,8 @@ class Ex3{
         System.out.println('\n' + "In-range/Out-of-range Adder" + '\n');
 
         boolean loop = true;
-        int lower;
-        int upper;
-        int num;
-        int sumRange = 0;
-        int sumOuter = 0;
-        int rangeNums = 0;
-        int outerNums = 0;
+        int lower, upper, num;
+        int sumRange = 0, sumOuter = 0, rangeNums = 0, outerNums = 0;
 
         System.out.println("Input lower bound: ");
         lower = scan.nextInt();
