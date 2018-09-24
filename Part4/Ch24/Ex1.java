@@ -11,10 +11,14 @@ class Ex1{
 
         System.out.println("After 0 years, there are 20 sheep");
 
-        for(int i = 0; i <= years; i++){
+        for(int i = 1; i <= years; i++){
             power = power * 0.83;
             N = 220 / (1 + 10 * power);
-            System.out.println("After " + i + " years, there are " + numform.format(N) + " sheep");
+            if(N > 80){
+                System.out.println("After " + i + " year(s), there are 80 sheep");
+            } else {
+                System.out.println("After " + i + " year(s), there are " + numform.format(N) + " sheep");
+            }
         }
         
     }
