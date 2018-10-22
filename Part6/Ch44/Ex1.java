@@ -5,7 +5,6 @@ public class Ex1{
         //Variables
         String oldName;
         String newName;
-        int spaceLocation;
 
         //Scan for name
         Scanner scan = new Scanner(System.in);
