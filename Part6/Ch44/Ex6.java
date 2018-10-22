@@ -21,12 +21,15 @@ public class Ex6{
             password.toLowerCase().equals(password)){
             return false;
         } else {
-            //if length and capitalization are good, checks for a number
-            for(int i = 0; i <= 9; i++){
-                if(password.indexOf(Integer.toString(i)) != -1) return true;
-            }
-            //no number means false
-            return false;
+            return hasNumber(password);
         }
     }
+
+    public static boolean hasNumber(String word){
+        for(int i = 0; i <= 9; i++){
+            if(word.indexOf(Integer.toString(i)) != -1) return true;
+        }
+        return false;
+    }
+
 }
