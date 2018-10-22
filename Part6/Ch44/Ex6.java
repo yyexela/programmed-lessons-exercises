@@ -15,37 +15,18 @@ public class Ex6{
     }
     
     public static boolean checkPassword(String password){
-        boolean failed = false;
-        boolean numberExists = false;
-
-        if(password.length() < 7) {
-            failed = true;
-            System.out.println("length too small");
-        }
-
-        if(password.toUpperCase().equals(password)) {
-            failed = true;
-            System.out.println("All uppercase");
-        }
-
-        if(password.toLowerCase().equals(password)) {
-            failed = true;
-            System.out.println("All lowercase");
-        }
-
-        for(int i = 0; i <= 9; i++){
-            if(password.indexOf(Integer.toString(i)) != -1) numberExists = true;
-        }
-
-        if(!numberExists) {
-            failed = true;
-            System.out.println("No numbers");
-        }
-        
-        if(failed == true){
+        //checks for length and capitalization
+        if( password.length() < 7 || 
+            password.toUpperCase().equals(password) ||
+            password.toLowerCase().equals(password)){
             return false;
-        } else return true;
-
+        } else {
+            //if length and capitalization are good, checks for a number
+            for(int i = 0; i <= 9; i++){
+                if(password.indexOf(Integer.toString(i)) != -1) return true;
+            }
+            //no number means false
+            return false;
+        }
     }
-
 }
