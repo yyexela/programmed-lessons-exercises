@@ -51,12 +51,24 @@ public class Box{
     }
 
     //Functions
+    private double topArea(){
+        return width*length;
+    }
+
+    private double faceArea(){
+        return height*length;
+    }
+
+    private double sideArea(){
+        return width*height;
+    }
+
     public double volume(){
         return width*length*height;
     }
 
     public double area(){
-        return 2*width*length + 2*width*height + 2*length*height;
+        return 2*topArea() + 2*sideArea() + 2*faceArea();
     }
 
 }
