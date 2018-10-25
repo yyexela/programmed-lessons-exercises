@@ -81,4 +81,12 @@ public class Box{
         return 2*topArea() + 2*sideArea() + 2*faceArea();
     }
 
+    public Box biggerBox(Box oldBox){
+        return new Box(1.25*oldBox.getWidth(), 1.25*oldBox.getHeight(), 1.25*oldBox.getLength());
+    }
+
+    public Box smallerBox(Box oldBox){
+        return new Box(0.75*oldBox.getWidth(), 0.75*oldBox.getHeight(), 0.75*oldBox.getLength());
+    }
+
 }
