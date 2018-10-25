@@ -89,4 +89,12 @@ public class Box{
         return new Box(0.75*oldBox.getWidth(), 0.75*oldBox.getHeight(), 0.75*oldBox.getLength());
     }
 
+    public boolean nests(Box oldBox){
+        if(oldBox.getLength() < this.getLength() && oldBox.getWidth() < this.getWidth() && oldBox.getHeight() < this.getHeight()){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
