@@ -28,17 +28,21 @@ public class BoxTester{
 
         //Checking box nests
         System.out.println("Checking box nests");
+        System.out.println("Box1: " + box1.toString());
+        System.out.println("Box2: " + box2.toString());
+        System.out.println("Box3: " + box3.toString());
+        System.out.println("Box4: " + box4.toString());
         if(box1.nests(box2)){
-            System.out.println("box1 nests box2");
-        } else System.out.println("box1 doesn't nest box2");
+            System.out.println("box2 nests box1");
+        } else System.out.println("box2 doesn't nest box1");
 
         if(box1.nests(box3)){
-            System.out.println("box1 nests box3");
-        } else System.out.println("box1 doesn't nest box3");
+            System.out.println("box3 nests box1");
+        } else System.out.println("box3 doesn't nest box1");
 
         if(box1.nests(box4)){
-            System.out.println("box1 nests box4");
-        } else System.out.println("box1 doesn't nest box4");
+            System.out.println("box4 nests box1");
+        } else System.out.println("box4 doesn't nest box1");
         System.out.println("");
 
     }
