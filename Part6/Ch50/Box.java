@@ -17,6 +17,12 @@ public class Box{
         this.length = side;
     }
 
+    public Box(Box oldBox){
+        this.width = oldBox.getWidth();
+        this.height = oldBox.getHeight();
+        this.length = oldBox.getLength();
+    }
+
     //Methods
     //Getters
     public double getWidth(){
@@ -29,6 +35,10 @@ public class Box{
 
     public double getHeight(){
         return height;
+    }
+
+    public String toString(){
+        return "Width: " + this.getWidth() + ", Height: " + this.getHeight() + ", Length: " + this.getLength();
     }
 
     //Setters
