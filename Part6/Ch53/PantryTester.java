@@ -37,7 +37,7 @@ public class PantryTester{
         }
         
         System.out.println("Goodbye!");
-        
+
     }
 
     public static int userSelect(Scanner scan){

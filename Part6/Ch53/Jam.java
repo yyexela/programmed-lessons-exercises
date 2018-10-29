@@ -39,6 +39,7 @@ public class Jam{
     //Functions
 
     public void spread(int amount){
+        System.out.println("Spreading " + amount + "fl oz of " + name);
         if(amount >= ounces){
             ounces = 0;
         } else ounces -= amount;
