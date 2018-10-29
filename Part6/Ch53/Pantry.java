@@ -30,6 +30,14 @@ public class Pantry{
 
     //Functions
 
+    public void replace(Jam jam, int slot){
+        if (select(slot)){
+            selected.setName(jam.getName());
+            selected.setOunces(jam.getOunces());
+            selected.setExpiration(jam.getExpiration());
+        }
+    }
+
     public String toString(){
         String complete = "";
         if(jar1 != null){
