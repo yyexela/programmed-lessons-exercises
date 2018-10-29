@@ -30,6 +30,22 @@ public class Pantry{
 
     //Functions
 
+    public void mixedFruit(){
+        if( (jar1 == null || jar1.getOunces() <= 2) &&
+            (jar2 == null || jar2.getOunces() <= 2) &&
+            (jar3 == null || jar3.getOunces() <= 2) ){
+                int totalOunces = 0;
+                if(jar1 != null) totalOunces += jar1.getOunces();
+                if(jar2 != null) totalOunces += jar2.getOunces();
+                if(jar3 != null) totalOunces += jar3.getOunces();
+                jar3 = null;
+                jar2 = null;
+                jar1.setOunces( totalOunces );
+                jar1.setName("Mixed Fruit");
+            } else System.out.println("No mixed fruit!");
+    
+    }
+
     public void replace(Jam jam, int slot){
         if (select(slot)){
             selected.setName(jam.getName());
