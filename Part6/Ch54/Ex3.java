@@ -7,7 +7,7 @@ public class Ex3{
         System.out.println("Enter upper limit:");
         long max = scan.nextLong();
 
-        for(int i = 0; i <= max; i++){
+        for(long i = 0; i <= max; i++){
             if(isLucky(i).equals("unlucky")){
                 //System.out.println(i + " is unlucky");
                 if( (bitType(oneCounter(bits(i)))).equals("Evil")){
