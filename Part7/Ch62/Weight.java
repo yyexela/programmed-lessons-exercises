@@ -22,4 +22,14 @@ public class Weight{
         }
         return complete;
     }
+
+    //Average
+    public int average(){
+        int avg = 0;
+        for(int i = 0; i < data.length; i++){
+            avg += data[i];
+        }
+        avg = avg / data.length;
+        return avg;
+    }
 }
