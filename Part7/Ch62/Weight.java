@@ -23,13 +23,23 @@ public class Weight{
         return complete;
     }
 
-    //Average
+    //Total Average
     public int average(){
         int avg = 0;
         for(int i = 0; i < data.length; i++){
             avg += data[i];
         }
         avg = avg / data.length;
+        return avg;
+    }
+
+    //Average over a Range
+    public int subAverage(int start, int end){
+        int avg = 0;
+        for(int i = start; i <= end; i++){
+            avg += data[i];
+        }
+        avg = avg / (end-start+1);
         return avg;
     }
 }
