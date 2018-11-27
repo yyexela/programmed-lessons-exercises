@@ -12,7 +12,7 @@ class PhoneBook{
     }
     public PhoneEntry search( String targetName ){
         for ( int j=0; j < phoneBook.length; j++ ){
-        if ( phoneBook[ j] != null && phoneBook[ j ].getName().equals( targetName ) )
+        if ( phoneBook[j] != null && phoneBook[j].getName().toLowerCase().equals( targetName ) )
             return phoneBook[ j ];
         }
         return null;

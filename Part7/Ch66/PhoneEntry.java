@@ -7,6 +7,6 @@ class PhoneEntry{
         name = n; phone = p;
     }
     
-    public String getName()  {return name;}
+    public String getName() {return name;}
     public String getPhone() {return phone;}
 }
