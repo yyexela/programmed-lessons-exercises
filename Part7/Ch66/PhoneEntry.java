@@ -1,12 +1,16 @@
 class PhoneEntry{
-    private String name;    // name of a person
-    private String phone;   // their phone number
+    private String firstName;    // name of a person
+    private String lastName;    // name of a person
+    private String phoneNumber;   // their phone number
 
-    public PhoneEntry( String n, String p )
+    public PhoneEntry( String firstName, String lastName, String phoneNumber )
     {
-        name = n; phone = p;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
     }
     
-    public String getName() {return name;}
-    public String getPhone() {return phone;}
+    public String getFirstName() {return firstName;}
+    public String getLastName() {return lastName;}
+    public String getPhoneNumber() {return phoneNumber;}
 }

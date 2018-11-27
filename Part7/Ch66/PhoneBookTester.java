@@ -6,21 +6,37 @@ public class PhoneBookTester{
 
         PhoneBook pb = new PhoneBook();  
     
-        String name = askName(scan);
-        PhoneEntry entry = pb.search(name);
-        while(!(name.equals("quit")) ){
-            if ( entry != null )
-            System.out.println( "The number is: " + entry.getPhone() );
-            else
-            System.out.println("Name not found" );
-            name = askName(scan);
-            entry = pb.search(name);
+        String firstName = askUser("First name?", scan);
+        String lastName = askUser("Last name?", scan);
+
+        PhoneEntry[] searchResults;
+
+        while(!(firstName.equals("quit")) && !(lastName.equals("quit")) ){
+
+            searchResults = pb.search(firstName, lastName);
+
+            if ( searchResults != null ){
+                for(int i = 0; i < searchResults.length; i++){
+                    if(searchResults[i] != null){
+                        System.out.println(searchResults[i].getFirstName() + " " + searchResults[i].getLastName() + ": " + searchResults[i].getPhoneNumber()) ;
+                    }
+                }
+                System.out.println("");
+            }else{
+                System.out.println("Name not found" + '\n');
+            }
+            
+            firstName = askUser("First name?", scan);
+            lastName = askUser("Last name?", scan);
+
         }
+
         System.out.println("Good-Bye");
+
     }
 
-    private static String askName(Scanner scan){
-        System.out.println("Name? (\'quit\' to quit)");
+    private static String askUser(String question, Scanner scan){
+        System.out.println(question);
         String name = scan.nextLine();
         if(name.length() > 0){
             name = name.toLowerCase();
