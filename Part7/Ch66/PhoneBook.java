@@ -5,13 +5,36 @@ class PhoneBook{
         phoneBook = new PhoneEntry[ 7 ] ;
 
         phoneBook[0] = new PhoneEntry( "James", "Barclay", "(418) 665-1223" );
-        phoneBook[1] = new PhoneEntry( "Grace", "Dunbar", "(860) 399-3044" );
-        phoneBook[2] = new PhoneEntry( "Paul", "Kratides", "(815) 439-9271" );
+        //phoneBook[1] = new PhoneEntry( "Grace", "Dunbar", "(860) 399-3044" );
+        //phoneBook[2] = new PhoneEntry( "Paul", "Kratides", "(815) 439-9271" );
         phoneBook[3] = new PhoneEntry( "John", "Wood", "(913) 883-2874" );
         phoneBook[4] = new PhoneEntry( "Violet", "Smith", "(312) 223-1937" );
         phoneBook[5] = new PhoneEntry( "Jacob", "Smith", "(321) 512-7132" );
         phoneBook[6] = new PhoneEntry( "Louis", "Smith", "(723) 712-3152" );
+    
     }
+
+    public PhoneEntry[] getPhoneBook(){
+        return phoneBook;
+    }
+
+    public void deleteEntry(String index){
+        phoneBook[ Integer.parseInt(index) ] = null;
+    }
+
+    public int length(){
+        return phoneBook.length;
+    }
+
+    public boolean isNull(int i){
+        if(phoneBook[i] == null) return true;
+        else return false;
+    }
+
+    public void addEntry(PhoneEntry add, int index){
+        phoneBook[index] = add;
+    }
+
     public PhoneEntry[] search( String firstName, String lastName ){
         PhoneEntry[] matchedEntries = new PhoneEntry[phoneBook.length];
         int count = 0;
